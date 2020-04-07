@@ -1,6 +1,7 @@
 /* global CONFIG */
 
 window.addEventListener('DOMContentLoaded', () => {
+  console.log("Search begin");
   // Popup Window
   let isfetched = false;
   let datas;

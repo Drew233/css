@@ -37,10 +37,8 @@
 .search-popup .search-icon,
 .search-popup .popup-btn-close {
   color: #999;
-  display: inline-block;
   font-size: 18px;
   height: 36px;
-  padding-left: 10px;
   padding-right: 10px;
   width: 18px;
 }
@@ -88,8 +86,7 @@
   display: inline-block;
   height: 36px;
   line-height: 36px;
-  padding: 0 5px;
-  position: absolute;
+  padding: 0 10px;
   width: calc(100% - 90px);
 }
 .search-popup .search-input-container input {

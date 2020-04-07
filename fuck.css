@@ -75,8 +75,7 @@
   }
 }
 
-
-
+{
   .search-popup {
     .search-input-container {
       flex-grow: 1;
@@ -115,5 +114,5 @@
       color: $grey-light;
       margin: auto;
     }
-
-
+  }
+}

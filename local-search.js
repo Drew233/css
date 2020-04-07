@@ -7,13 +7,13 @@ window.addEventListener('DOMContentLoaded', () => {
   let datas;
   let isXml = true;
   // Search DB path
-  let searchPath = CONFIG.path;
+  let searchPath = search.xml;
   if (searchPath.length === 0) {
     searchPath = 'search.xml';
   } else if (/json$/i.test(searchPath)) {
     isXml = false;
   }
-  const path = CONFIG.root + searchPath;
+  const path = "/" + searchPath;
   const input = document.getElementById('search-input');
   const resultContent = document.getElementById('search-result');
 
@@ -120,9 +120,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let title = data.title.trim();
         let titleInLowerCase = title.toLowerCase();
         let content = data.content ? data.content.trim().replace(/<[^>]+>/g, '') : '';
-        if (CONFIG.localsearch.unescape) {
           content = unescapeHtml(content);
-        }
         let contentInLowerCase = content.toLowerCase();
         let articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
         let indexOfTitle = [];
@@ -185,7 +183,7 @@ window.addEventListener('DOMContentLoaded', () => {
           });
 
           // Select top N slices in content
-          let upperBound = parseInt(CONFIG.localsearch.top_n_per_article, 10);
+          let upperBound = 10;
           if (upperBound >= 0) {
             slicesOfContent = slicesOfContent.slice(0, upperBound);
           }
@@ -259,9 +257,9 @@ window.addEventListener('DOMContentLoaded', () => {
       });
   };
 
-  if (CONFIG.localsearch.preload) {
-    fetchData();
-  }
+//   if (CONFIG.localsearch.preload) {
+//     fetchData();
+//   }
 
   const proceedSearch = () => {
     document.body.style.overflow = 'hidden';
@@ -277,16 +275,8 @@ window.addEventListener('DOMContentLoaded', () => {
     fetchData(proceedSearch);
   };
 
-  if (CONFIG.localsearch.trigger === 'auto') {
     input.addEventListener('input', inputEventFunction);
-  } else {
-    document.querySelector('.search-icon').addEventListener('click', inputEventFunction);
-    input.addEventListener('keypress', event => {
-      if (event.keyCode === 13) {
-        inputEventFunction();
-      }
-    });
-  }
+ 
 
   // Handle and trigger popup window
   document.querySelector('.popup-trigger').addEventListener('click', () => {

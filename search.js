@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let datas;
   let isXml = true;
   // Search DB path
-  let searchPath = search.xml;
+  let searchPath = 'search.xml';
   if (searchPath.length === 0) {
     searchPath = 'search.xml';
   } else if (/json$/i.test(searchPath)) {

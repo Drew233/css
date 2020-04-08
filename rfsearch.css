@@ -22,6 +22,7 @@
   top: 15%;
   width: 700px;
   z-index: 1500;
+  cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/normal.cur),auto
 }
 @media (max-width: 767px) {
   .search-popup {
@@ -46,6 +47,7 @@
   border-left: 1px solid #eee;
   cursor: pointer;
   float: right;
+  cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/ayuda.cur),auto
 }
 .search-popup .popup-btn-close:hover .fa {
   color: #222;
@@ -98,6 +100,7 @@
   padding: 8px 0;
   vertical-align: middle;
   width: 100%;
+  cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/texto.cur),auto
 }
 .search-popup #no-result {
   color: #ccc;

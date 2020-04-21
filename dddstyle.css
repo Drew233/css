@@ -848,6 +848,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 p {
     margin-bottom:1.5em;
+    font-size: 15px;
     cursor:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/texto.cur),auto
 }
 dfn,cite,em,i {
@@ -978,8 +979,16 @@ dd {
 }
 img {
     height:auto;
-    max-width:100%
+    max-width:100%;
 }
+.img-margin {
+    margin: 25px auto 10px auto;
+}
+.img-shadow {
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .2), 0 10px 30px -11px rgba(0, 0, 0, .6);
+}
+
+
 table {
     margin:0 0 1.5em;
     width:100%
